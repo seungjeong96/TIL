@@ -1,4 +1,4 @@
-# Git 사용 방법
+# How to use GIT
 
 1. Initiate
    1. Create a folder
