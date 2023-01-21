@@ -92,4 +92,136 @@ iterators = cycle(testList)
 Hope / You / Have / a / Great / Day / Hope / You / Have / a / Great / Day / Hope / You / Have /
 ```
 
-##
+## Combinatoric Iterators
+
+### Product()
+
+- 카테시안 곱 연산
+- n개로 구성된 모든 조합 생성
+
+```python
+from itertools import product
+
+print(list(product('ABCD',repeat = 2)))
+print()
+print(list(product(['AB','CD','EF'],'2',repeat = 2)))
+print()
+print(list(product(['AB','CD'],'2')))
+
+print(list(product('AB',[2,1])))
+
+
+```
+
+```
+		[('A', 'A'), ('A', 'B'), ('A', 'C'), ('A', 'D'), ('B', 'A'), ('B', 'B'), ('B', 'C'), ('B', 'D'), ('C', 'A'), ('C', 'B'), ('C', 'C'), ('C', 'D'), ('D', 'A'), ('D', 'B'), ('D', 'C'), ('D', 'D')]
+
+        	[('AB', '2', 'AB', '2'), ('AB', '2', 'CD', '2'), ('CD', '2', 'AB', '2'), ('CD', '2', 'CD', '2')]
+
+            [('AB', '2'), ('CD', '2')]
+
+
+```
+
+### permutations()
+
+- 순열 생성
+
+### combinations()
+
+- 조합 생성
+
+### combinations_with_replacement()
+
+- 요소 중복 허용 조합 생성
+
+## Iterators terminating on the shortest input sequence
+
+### accmulate()
+
+- 시퀀스의 누적 합을 구할 때 사용
+
+```python
+from itertools import accumulate
+
+    lists = [1,3,5,7,9]
+    data = accumulate(lists)
+    print(*data)
+```
+
+```
+1 4 9 16 25
+```
+
+### chain()
+
+- List 연결 시 사용함
+
+```python
+from itertools import chain
+    listDataNum = [2,4,6,8,10]
+    listDataChar = ['A','B','C','D']
+
+    finalData = chain(listDataNum,listDataChar)
+
+    print(*finalData)
+
+```
+
+```
+2 4 6 8 10 A B C D
+```
+
+### set1.intersection(set2) / set1&set2
+
+- set1과 set2의 교집합
+
+### set1.union(set2) / set1|set2
+
+- set1과 set2의 합집합
+
+### set1.difference(set2) / set1 - set2
+
+- set1과 set2의 차집합
+
+### set1 ^ set2
+
+- 대칭 차집합
+
+### set1.update([list])
+
+- 집합 요소 추가
+
+### set1.remove()
+
+\*집합 요소 제거
+
+### for 문의 두가지 형태
+
+```python
+a = [i*i for i in range(5)]
+print(a)
+```
+
+```
+[0,1,4,9,16,25]
+```
+
+### reversed()
+
+- 리스트 내 항목들의 순서를 뒤집음
+
+### map(type, LISTNAME)
+
+- 리스트 LISTNAME을 type으로 변환
+
+### dict
+
+#### list -> dict
+
+1.
+
+n%10
+n/=10
+
+map
